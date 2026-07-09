@@ -219,9 +219,100 @@ a {
   }
 }
 
+.chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #fff;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+  animation: bob 7s ease-in-out infinite;
+}
+
+.chip svg {
+  width: 22px;
+  height: 22px;
+}
+
+.chip-a {
+  top: 22%;
+  left: 9%;
+}
+
+.chip-b {
+  top: 16%;
+  right: 11%;
+  animation-delay: -2.3s;
+}
+
+.chip-c {
+  bottom: 16%;
+  left: 20%;
+  animation-delay: -4.6s;
+}
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(0) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(4deg);
+  }
+}
+
 .hero .container {
   position: relative;
   z-index: 1;
+}
+
+.scroll-cue {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 48px auto 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  color: var(--color-primary);
+  cursor: pointer;
+  animation: cue-bounce 2s ease-in-out infinite;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.scroll-cue:hover {
+  border-color: var(--color-primary);
+}
+
+.scroll-cue svg {
+  width: 18px;
+  height: 18px;
+}
+
+@keyframes cue-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@media (max-width: 600px) {
+  .chip {
+    width: 40px;
+    height: 40px;
+  }
+
+  .chip svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .hero h1 {

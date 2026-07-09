@@ -6,12 +6,13 @@
   var nav = document.getElementById("nav");
   var toTop = document.getElementById("to-top");
   var navLinks = nav ? Array.prototype.slice.call(nav.querySelectorAll("a")) : [];
-  var sections = navLinks
-    .map(function (link) {
-      var id = link.getAttribute("href");
-      return id && id.charAt(0) === "#" ? document.querySelector(id) : null;
-    })
-    .filter(Boolean);
+
+  var currentPage = location.pathname.split("/").pop() || "index.html";
+  navLinks.forEach(function (link) {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("is-active");
+    }
+  });
 
   function closeNav() {
     nav.classList.remove("is-open");
@@ -38,17 +39,6 @@
     if (toTop) {
       toTop.classList.toggle("is-visible", scrollY > 480);
     }
-
-    var current = sections[0];
-    sections.forEach(function (section) {
-      if (scrollY >= section.offsetTop - 120) {
-        current = section;
-      }
-    });
-    navLinks.forEach(function (link) {
-      var match = current && link.getAttribute("href") === "#" + current.id;
-      link.classList.toggle("is-active", !!match);
-    });
   }
 
   var ticking = false;
@@ -70,6 +60,14 @@
   if (toTop) {
     toTop.addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  var scrollCue = document.getElementById("scroll-cue");
+  var hero = document.getElementById("hero");
+  if (scrollCue && hero) {
+    scrollCue.addEventListener("click", function () {
+      window.scrollTo({ top: hero.offsetHeight, behavior: "smooth" });
     });
   }
 

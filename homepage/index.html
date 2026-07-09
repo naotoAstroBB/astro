@@ -14,26 +14,35 @@
 
 <header class="site-header" id="site-header">
   <div class="container header-inner">
-    <a class="logo" href="#top">ASTRO<span>market</span></a>
+    <a class="logo" href="index.html">ASTRO<span>market</span></a>
     <button class="nav-toggle" id="nav-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
       <span></span><span></span><span></span>
     </button>
     <nav class="nav" id="nav">
-      <a href="#services">事業内容</a>
-      <a href="#about">代表者情報</a>
-      <a href="#news">お知らせ</a>
-      <a href="#contact">お問い合わせ</a>
+      <a href="services.html">事業内容</a>
+      <a href="about.html">代表者情報</a>
+      <a href="news.html">お知らせ</a>
+      <a href="contact.html">お問い合わせ</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
+<main>
 
-  <section class="hero">
+  <section class="hero" id="hero">
     <div class="hero-decor" aria-hidden="true">
       <span class="blob blob-a"></span>
       <span class="blob blob-b"></span>
       <span class="grid-overlay"></span>
+      <span class="chip chip-a">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+      </span>
+      <span class="chip chip-b">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>
+      </span>
+      <span class="chip chip-c">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2l2.7 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"/></svg>
+      </span>
     </div>
     <div class="container">
       <h1 class="reveal">暮らしと仕事に、ちょうどいい価値を届ける。</h1>
@@ -41,17 +50,20 @@
         法人のお客様の通信・業務改善から、日々の暮らしを彩るお買い物まで。<br>
         ちょうどいいサービスとプロダクトをお届けしています。
       </p>
-      <a class="btn reveal" href="#contact">お問い合わせはこちら</a>
+      <a class="btn reveal" href="contact.html">お問い合わせはこちら</a>
     </div>
+    <button class="scroll-cue reveal" id="scroll-cue" aria-label="下にスクロール">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
   </section>
 
-  <section id="services" class="services">
+  <section class="services">
     <div class="container">
       <h2 class="section-title reveal">事業内容</h2>
       <p class="section-lead reveal">法人携帯・回線サービス、ERP製品・サービス、ECの3つを柱に、お客様の課題を解決します。</p>
 
       <div class="service-grid">
-        <article class="service-card service-card--soon reveal">
+        <a class="service-card service-card--soon service-card--link reveal" href="services.html">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="6" y="2" width="12" height="20" rx="2.5"/>
@@ -59,13 +71,10 @@
             </svg>
           </div>
           <h3>法人携帯・回線サービス提供<span class="badge">近日開始予定</span></h3>
-          <p>
-            法人・個人事業主のお客様向けに、法人携帯および関連回線のご案内から導入までをサポートします。
-            各サービス提供会社と連携し、コストや運用のしやすさを踏まえたご提案を行います。
-          </p>
-        </article>
+          <p>法人・個人事業主のお客様向けに、法人携帯および関連回線のご案内から導入までをサポートします。</p>
+        </a>
 
-        <article class="service-card service-card--soon reveal">
+        <a class="service-card service-card--soon service-card--link reveal" href="services.html">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="3" y="3" width="8" height="8" rx="1.5"/>
@@ -75,13 +84,10 @@
             </svg>
           </div>
           <h3>ERP製品・サービスのご提供<span class="badge">近日開始予定</span></h3>
-          <p>
-            勤怠管理や経費精算、請求書・会計、電子契約など、バックオフィス業務を支えるERP製品・SaaSの導入をご支援します。
-            お客様の課題をヒアリングし、サービス選定から商談設定までを伴走します。
-          </p>
-        </article>
+          <p>勤怠管理や経費精算、請求書・会計、電子契約など、バックオフィス業務を支えるERP製品・SaaSの導入をご支援します。</p>
+        </a>
 
-        <article class="service-card reveal">
+        <a class="service-card service-card--link reveal" href="services.html">
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="9" cy="20" r="1.4"/>
@@ -90,70 +96,29 @@
             </svg>
           </div>
           <h3>EC運営</h3>
-          <p>
-            自社ECショップを企画・運営し、暮らしにプラスアルファの心地よさを添える雑貨・小物などをお届けしています。
-            商品との出会いから購入後のフォローまで、気持ちよくお使いいただける体験を大切にしています。
-          </p>
-        </article>
+          <p>自社ECショップを企画・運営し、暮らしにプラスアルファの心地よさを添える雑貨・小物などをお届けしています。</p>
+        </a>
       </div>
+
+      <p class="services-more reveal"><a class="link-arrow" href="services.html">事業内容の詳細を見る →</a></p>
     </div>
   </section>
 
-  <section id="about" class="about">
-    <div class="container about-inner">
-      <h2 class="section-title reveal">代表者情報</h2>
-      <table class="about-table reveal">
-        <tbody>
-          <tr>
-            <th>屋号</th>
-            <td>ASTRO market</td>
-          </tr>
-          <tr>
-            <th>代表</th>
-            <td>高橋 直人</td>
-          </tr>
-          <tr>
-            <th>所在地</th>
-            <td>千葉県八千代市勝田台<br><span class="muted">（詳細はお問い合わせください）</span></td>
-          </tr>
-          <tr>
-            <th>事業内容</th>
-            <td>情報サービス業 / 雑貨小物類販売 / EC運営<br>（法人携帯・回線サービス提供、ERP製品・サービス提供は準備中）</td>
-          </tr>
-          <tr>
-            <th>メール</th>
-            <td><a href="mailto:naoto.takahashi@astro-market.jp">naoto.takahashi@astro-market.jp</a></td>
-          </tr>
-          <tr>
-            <th>電話番号</th>
-            <td>お問い合わせください</td>
-          </tr>
-        </tbody>
-      </table>
+  <section class="news-teaser">
+    <div class="container news-teaser-inner">
+      <div>
+        <h2 class="section-title--inline reveal">お知らせ</h2>
+        <p class="reveal"><time datetime="2026-07-09">2026.07.09</time> ホームページを公開しました。</p>
+      </div>
+      <a class="link-arrow reveal" href="news.html">お知らせ一覧を見る →</a>
     </div>
   </section>
 
-  <section id="news" class="news">
-    <div class="container">
-      <h2 class="section-title reveal">お知らせ</h2>
-      <ul class="news-list reveal">
-        <li>
-          <time datetime="2026-07-09">2026.07.09</time>
-          <span>ホームページを公開しました。</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
+  <section class="cta">
     <div class="container">
       <h2 class="section-title reveal">お問い合わせ</h2>
-      <p class="section-lead reveal">
-        サービス内容やお取引に関するご相談は、下記よりお気軽にお問い合わせください。
-      </p>
-      <div class="contact-links reveal">
-        <a class="btn btn-outline" href="mailto:naoto.takahashi@astro-market.jp">naoto.takahashi@astro-market.jp へメールする</a>
-      </div>
+      <p class="section-lead reveal">サービス内容やお取引に関するご相談は、お気軽にお問い合わせください。</p>
+      <a class="btn reveal" href="contact.html">お問い合わせはこちら</a>
     </div>
   </section>
 
