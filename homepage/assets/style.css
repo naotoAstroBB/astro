@@ -1,0 +1,270 @@
+:root {
+  --color-primary: #1d4ed8;
+  --color-primary-dark: #1e3a8a;
+  --color-bg: #ffffff;
+  --color-bg-soft: #f5f7fb;
+  --color-text: #1f2430;
+  --color-text-soft: #5b6472;
+  --color-border: #e2e6ee;
+  --radius: 12px;
+  --max-width: 1080px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.8;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a {
+  color: inherit;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--color-primary-dark);
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  font-size: 0.9rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--color-text-soft);
+}
+
+.nav a:hover {
+  color: var(--color-primary);
+}
+
+/* Hero */
+.hero {
+  padding: 88px 0 72px;
+  background: linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-bg) 100%);
+  text-align: center;
+}
+
+.hero-eyebrow {
+  color: var(--color-primary);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin: 0 0 20px;
+  color: var(--color-primary-dark);
+}
+
+.hero-lead {
+  color: var(--color-text-soft);
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--color-primary-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 12px 30px;
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* Section shared */
+section {
+  padding: 72px 0;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  color: var(--color-primary-dark);
+  text-align: center;
+  margin: 0 0 12px;
+}
+
+.section-lead {
+  text-align: center;
+  color: var(--color-text-soft);
+  margin: 0 auto 48px;
+  max-width: 560px;
+}
+
+/* Services */
+.services {
+  background: var(--color-bg-soft);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+}
+
+.service-card--soon {
+  border-color: var(--color-primary);
+  background: #eef4ff;
+}
+
+.service-icon {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.service-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.service-card p {
+  color: var(--color-text-soft);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-primary);
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+/* About */
+.about-inner {
+  max-width: 720px;
+}
+
+.about-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.about-table th,
+.about-table td {
+  text-align: left;
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.about-table th {
+  width: 140px;
+  color: var(--color-text-soft);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* News */
+.news {
+  background: var(--color-bg-soft);
+}
+
+.news-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 640px;
+}
+
+.news-list li {
+  display: flex;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.news-list time {
+  color: var(--color-text-soft);
+  flex-shrink: 0;
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+}
+
+/* Footer */
+.site-footer {
+  padding: 32px 0;
+  text-align: center;
+  color: var(--color-text-soft);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 600px) {
+  .nav {
+    gap: 14px;
+    font-size: 0.8rem;
+  }
+}
