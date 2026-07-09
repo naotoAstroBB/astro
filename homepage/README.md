@@ -32,10 +32,15 @@ homepage/
 
 「法人携帯・回線サービス提供」「ERP製品・サービスのご提供」（`services.html`）は契約開始後、必要に応じて内容を更新してください。
 
-## 公開方法（GitHub Pages を使う場合）
+## 公開方法（GitHub Pages）
 
-1. GitHubリポジトリの Settings → Pages を開く
-2. Source を「Deploy from a branch」にし、対象ブランチと `/homepage` フォルダ（または `/docs` に配置し直す）を指定
-3. 数分後に発行されるURLでサイトを確認（`index.html` がトップページとして表示されます）
+`.github/workflows/deploy-pages.yml` に、`homepage/` フォルダをそのまま公開するワークフローを用意済みです。
+有効化に必要なのは以下の1回だけの操作です。
+
+1. GitHubリポジトリの **Settings → Pages** を開く
+2. **Build and deployment → Source** を「**GitHub Actions**」に変更する
+
+これだけで、このブランチに `homepage/` の変更をpushするたびに自動でデプロイされ、URLが発行されます
+（初回は Settings → Pages の画面、または Actions タブの実行結果にURLが表示されます）。
 
 社名・住所・電話番号などが決まりましたら、いつでも反映します。
