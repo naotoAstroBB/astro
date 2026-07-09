@@ -275,6 +275,13 @@ section {
   text-align: center;
 }
 
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
 /* Footer */
 .site-footer {
   padding: 32px 0;
