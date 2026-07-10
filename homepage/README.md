@@ -1,6 +1,6 @@
-# ASTRO market ホームページ
+# ASTRO Market ホームページ
 
-情報サービス業・雑貨小物類販売・EC運営を行うASTRO marketのホームページです。
+情報サービス業・雑貨小物類販売・EC運営を行うASTRO Marketのホームページです。
 ビルド不要の静的HTML/CSS/JSの複数ページ構成で、`index.html` をブラウザで開くだけで確認できます。
 
 ## ファイル構成
