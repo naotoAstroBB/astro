@@ -462,11 +462,6 @@ body.reveal-armed .reveal.is-visible {
   border-color: #c7d5f5;
 }
 
-.service-card--soon {
-  border-color: var(--color-primary);
-  background: var(--color-primary-soft);
-}
-
 .service-icon {
   display: inline-flex;
   align-items: center;
@@ -497,15 +492,6 @@ body.reveal-armed .reveal.is-visible {
   color: var(--color-text-soft);
   font-size: 0.92rem;
   margin: 0;
-}
-
-.badge {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: #fff;
-  background: var(--color-primary);
-  padding: 3px 10px;
-  border-radius: 999px;
 }
 
 /* About */
