@@ -45,6 +45,7 @@ homepage/
 
 1. GitHubリポジトリの **Settings → Pages** を開く
 2. **Build and deployment → Source** を「**GitHub Actions**」に変更する
+3. **Settings → Actions → General → Workflow permissions** を「**Read and write permissions**」に変更する（`pages: write` などをワークフローに許可するため）
 
 これだけで、このブランチに `homepage/` の変更をpushするたびに自動でデプロイされ、URLが発行されます
 （初回は Settings → Pages の画面、または Actions タブの実行結果にURLが表示されます）。
