@@ -49,4 +49,9 @@ homepage/
 これだけで、このブランチに `homepage/` の変更をpushするたびに自動でデプロイされ、URLが発行されます
 （初回は Settings → Pages の画面、または Actions タブの実行結果にURLが表示されます）。
 
+## 独自ドメイン
+
+`homepage/CNAME` に `astro-market.jp` を設定済みです。お名前.com側でA/AAAAレコードを追加し、
+DNSが反映されると、GitHub Pagesが自動でドメインを認識し、HTTPS証明書（Let's Encrypt）も自動発行されます。
+
 社名・住所・電話番号などが決まりましたら、いつでも反映します。
