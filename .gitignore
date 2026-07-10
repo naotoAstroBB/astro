@@ -1,0 +1,18 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Env / secrets — never commit these
+.env
+.env.*
+*.pem
+*.key
+
+# Claude Code session artifacts
+.claude/
