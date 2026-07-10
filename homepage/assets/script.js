@@ -97,4 +97,50 @@
   if (copyrightYear) {
     copyrightYear.textContent = String(new Date().getFullYear());
   }
+
+  var contactForm = document.getElementById("contact-form");
+  var formStatus = document.getElementById("form-status");
+  if (contactForm && formStatus) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Honeypot: if this hidden field got filled in, silently drop it.
+      if (contactForm.elements.botcheck && contactForm.elements.botcheck.checked) {
+        return;
+      }
+
+      var submitButton = contactForm.querySelector(".form-submit");
+      submitButton.disabled = true;
+      formStatus.textContent = "送信中です…";
+      formStatus.className = "form-status";
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(contactForm),
+      })
+        .then(function (response) {
+          return response.json().then(function (data) {
+            return { ok: response.ok && data.success, data: data };
+          });
+        })
+        .then(function (result) {
+          if (result.ok) {
+            formStatus.textContent = "送信しました。お問い合わせいただきありがとうございます。";
+            formStatus.className = "form-status is-success";
+            contactForm.reset();
+          } else {
+            formStatus.textContent = "送信に失敗しました。お手数ですが、下記のメールアドレスから直接ご連絡ください。";
+            formStatus.className = "form-status is-error";
+          }
+        })
+        .catch(function () {
+          formStatus.textContent = "送信に失敗しました。お手数ですが、下記のメールアドレスから直接ご連絡ください。";
+          formStatus.className = "form-status is-error";
+        })
+        .finally(function () {
+          submitButton.disabled = false;
+        });
+    });
+  }
 })();
