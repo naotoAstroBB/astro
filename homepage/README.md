@@ -55,5 +55,6 @@ homepage/
 
 `homepage/CNAME` に `astro-market.jp` を設定済みです。お名前.com側でA/AAAAレコードを追加し、
 DNSが反映されると、GitHub Pagesが自動でドメインを認識し、HTTPS証明書（Let's Encrypt）も自動発行されます。
+（`astro-market.jp` 稼働確認 / DNS check successful 済み）
 
 社名・住所・電話番号などが決まりましたら、いつでも反映します。
